@@ -63,12 +63,12 @@ foreign import jscript "%1.forms" 		documentForms 		:: Document -> JSArray Form
 foreign import jscript "%1.images" 		documentImages 		:: Document -> JSArray Image
 foreign import jscript "%1.links" 		documentLinks 		:: Document -> JSArray Link
 
-foreign import jscript "%1.write()" 	documentWrite 		:: Document -> JSString -> IO ()
-foreign import jscript "%1.writeln()" 	documentWriteln 	:: Document -> JSString -> IO ()
+foreign import jscript "%1.write(%*)" 	documentWrite 		:: Document -> JSString -> IO ()
+foreign import jscript "%1.writeln(%*)" 	documentWriteln 	:: Document -> JSString -> IO ()
 
-foreign import jscript "%1.getElementById()" 		documentGetElementById 			:: Document -> JSString -> IO Node
-foreign import jscript "%1.getElementsByName()" 	documentGetElementsByName 		:: Document -> JSString -> IO (NodeList Node)
-foreign import jscript "%1.getElementsByTagName()" 	documentGetElementsByTagName 	:: Document -> JSString -> IO (NodeList Node)
+foreign import jscript "%1.getElementById(%*)" 		documentGetElementById 			:: Document -> JSString -> IO Node
+foreign import jscript "%1.getElementsByName(%*)" 	documentGetElementsByName 		:: Document -> JSString -> IO (NodeList Node)
+foreign import jscript "%1.getElementsByTagName(%*)" 	documentGetElementsByTagName 	:: Document -> JSString -> IO (NodeList Node)
 
 data Anchor
 
@@ -111,9 +111,9 @@ data NamedNodeMap x
 
 foreign import jscript "%1.length" 	 			namedNodeMapLength	 			:: NamedNodeMap Node -> Int
 foreign import jscript "%1[%2]" 				namedNodeMapItem	 			:: NamedNodeMap Node -> Int -> IO Node
-foreign import jscript "%1.getNamedItem()"  	namedNodeMapNamedItem	 		:: NamedNodeMap Node -> JSString -> IO Node
-foreign import jscript "%1.removeNamedItem()"  	namedNodeMapRemoveNamedItem	 	:: NamedNodeMap Node -> JSString -> IO Node
-foreign import jscript "%1.setNamedItem()"  	namedNodeMapSetNamedItem	 	:: NamedNodeMap Node -> Node -> IO Node
+foreign import jscript "%1.getNamedItem(%*)"  	namedNodeMapNamedItem	 		:: NamedNodeMap Node -> JSString -> IO Node
+foreign import jscript "%1.removeNamedItem(%*)"  	namedNodeMapRemoveNamedItem	 	:: NamedNodeMap Node -> JSString -> IO Node
+foreign import jscript "%1.setNamedItem(%*)"  	namedNodeMapSetNamedItem	 	:: NamedNodeMap Node -> Node -> IO Node
 
 data Attr
 
