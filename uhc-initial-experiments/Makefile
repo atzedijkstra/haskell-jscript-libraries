@@ -1,8 +1,8 @@
 default:
-	uhc Main.js -tjscript --gen-trace=1
+	uhc Main.js -tjscript --gen-trace=1 --no-recomp
 	
 notrace:
-	uhc Main.js -tjscript
+	uhc Main.js -tjscript --no-recomp
 
 clean:
-	find . -iname "*.hi" -o -iname "*.mjs" -o -iname "*.c" -o -iname "*.grin" -o -iname "*.core" | xargs rm
+	find . -iname "*.hi" -o -iname "*.mjs" -o -iname "*.c" -o -iname "*.grin" -o -iname "*.core" -o -iname "*.html" -o -iname "Main.js" | xargs rm
