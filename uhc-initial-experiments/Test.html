@@ -1,4 +1,13 @@
 <!DOCTYPE html><html><head><title>Main</title>
+<style type="text/css">
+p.neat {
+    display: none;
+    clear: both;
+    margin: 1em 0;
+    padding: 1em 15px;
+    background: #0F67A1;
+}
+</style>
 <script type="text/javascript" src="/usr/local/lib/uhc-1.1.2/lib/jscript/libEH-RTS.mjs"></script>
 <script type="text/javascript" src="/usr/local/lib/uhc-1.1.2/lib/pkg/uhcbase-1.1.2/uhc-1.1.2/jscript/plain/UHC/UHC_Base.mjs"></script>
 <script type="text/javascript" src="/usr/local/lib/uhc-1.1.2/lib/pkg/uhcbase-1.1.2/uhc-1.1.2/jscript/plain/UHC/UHC_BoxArray.mjs"></script>
@@ -35,12 +44,10 @@
 <script type="text/javascript" src="JScript.mjs"></script>
 <script type="text/javascript" src="Main.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-    sayHi();
-    showAlert();
-});
+$(document).ready(jQueryMain);
 </script>
 </head>
 <body>
+<p class="neat"><strong>Congratulations!</strong> This awesome jQuery script has been called by a function you have written in Haskell!</p>
 </body>
 </html>
