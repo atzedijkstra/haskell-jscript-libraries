@@ -6,7 +6,7 @@ import JScript.JQuery
 main :: IO ()
 main = return () -- putStrLn "Body content from main"
 
-foreign export jscript "jQueryMain " jQueryMain :: IO ()
+foreign export jscript "jQueryMain" jQueryMain :: IO ()
 
 jQueryMain :: IO ()
 jQueryMain = do showAlert
