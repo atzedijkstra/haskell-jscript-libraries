@@ -5,4 +5,4 @@ notrace:
 	uhc Main.js -tjscript --no-recomp
 
 clean:
-	find . -iname "*.hi" -o -iname "*.mjs" -o -iname "*.c" -o -iname "*.grin" -o -iname "*.core" -o -iname "*.html" -o -iname "Main.js" | xargs rm
+	find . -iname "*.hi" -o -iname "*.mjs" -o -iname "*.c" -o -iname "*.grin" -o -iname "*.core" -o -iname "Main.js" | xargs rm
