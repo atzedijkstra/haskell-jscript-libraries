@@ -33,5 +33,6 @@ foreign export jscript "showNeat" showNeat :: IO ()
 showNeat :: IO ()
 showNeat = 
     do j <- select $ s2js "p.neat"
-       addClass j $ s2js "ohmy" 
-       jQShow j $ s2js "slow"
+       addClass j  $ s2js "ohmy" 
+       jqshow   j  slow
+       
