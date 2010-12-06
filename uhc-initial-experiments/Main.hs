@@ -10,12 +10,12 @@ main = putStrLn "Body content from main"
 foreign export jscript "showAlert" showAlert :: IO ()
 
 showAlert :: IO ()
-showAlert = alert $ stringToJSString "Hello, World!"
+showAlert = alert $ s2js "Hello, World!"
 
 foreign export jscript "sayHi" sayHi :: IO ()
 
 sayHi :: IO ()
 sayHi =  
-    do j <- select $ stringToJSString "body"
-       setHTML j $ stringToJSString "Hi there!"
+    do j <- select $ s2js "body"
+       setHTML j $ s2js "Hi there!"
 
