@@ -4,7 +4,7 @@ import JScript
 import JScript.JQuery
 
 main :: IO ()
-main = return () -- putStrLn "Body content from main"
+main = return ()
 
 foreign export jscript "jQueryMain" jQueryMain :: IO ()
 
