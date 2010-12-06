@@ -23,7 +23,10 @@ foreign export jscript "sayHi" sayHi :: IO ()
 sayHi :: IO ()
 sayHi =  
     do j <- select $ s2js "body"
-       setHTML j $ s2js "Hi there!<p class='neat'><strong>Congratulations!</strong> This awesome jQuery script has been called by a function you have written in Haskell!</p>"
+       setHTML j $ s2js ( "Hi there!<p class='neat'>"
+                       ++ "<strong>Congratulations!</strong> This awesome "
+                       ++ "jQuery script has been called by a function you have "
+                       ++ "written in Haskell!</p>" )
 
 foreign export jscript "showNeat" showNeat :: IO ()
 
