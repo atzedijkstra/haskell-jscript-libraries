@@ -11,6 +11,7 @@ foreign export jscript "jQueryMain" jQueryMain :: IO ()
 jQueryMain :: IO ()
 jQueryMain = do showAlert
                 sayHi
+                addNeat
                 showNeat
 
 foreign export jscript "showAlert" showAlert :: IO ()
@@ -23,7 +24,15 @@ foreign export jscript "sayHi" sayHi :: IO ()
 sayHi :: IO ()
 sayHi =  
     do j <- select $ s2js "body"
-       setHTML j $ s2js ( "Hi there!<p class='neat'>"
+       setHTML j $ s2js "Hi there!"
+
+foreign export jscript "addNeat" addNeat :: IO ()
+
+addNeat :: IO ()
+addNeat =
+    do j <- select $ s2js "body"
+       h <- getHTML j
+       setHTML j $ s2js ((js2s h) ++ "<p class='neat'>"
                        ++ "<strong>Congratulations!</strong> This awesome "
                        ++ "jQuery script has been called by a function you have "
                        ++ "written in Haskell!</p>" )
