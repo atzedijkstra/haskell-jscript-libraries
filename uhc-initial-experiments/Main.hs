@@ -34,5 +34,5 @@ showNeat :: IO ()
 showNeat = 
     do j <- select $ s2js "p.neat"
        addClass j  $ s2js "ohmy" 
-       jqshow   j  slow
+       jqshow   j  (Just slow) Nothing Nothing
        
